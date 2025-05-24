@@ -11,7 +11,7 @@ import java.util.*;
 
 public class LeaveDAO {
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "Ssp$$sql26");
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "");
     }
     
    
