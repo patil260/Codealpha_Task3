@@ -13,7 +13,7 @@ public class UserDAO {
             System.out.println("❌ JDBC Driver not found!");
             e.printStackTrace();
         }
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "Ssp$$sql26");
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "");
     }
 
     // Validate login credentials
