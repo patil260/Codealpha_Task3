@@ -1,0 +1,1 @@
+This is Employee leave management system project . by using java , Mysql for backend and for frontend html css and javascript. in this project employees can request for leave and admin will approve it 
