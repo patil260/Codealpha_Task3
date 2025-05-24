@@ -7,7 +7,7 @@ import java.sql.*;
 public class AdminDAO {
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "Ssp$$sql26");
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "");
     }
 
     public static Admin validateLogin(String username, String password) {
