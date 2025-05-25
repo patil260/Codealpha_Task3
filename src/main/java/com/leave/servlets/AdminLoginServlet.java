@@ -19,18 +19,18 @@ public class AdminLoginServlet extends HttpServlet {
         if (username != null) username = username.trim();
         if (password != null) password = password.trim();
 
-        System.out.println("🔐 Attempting Admin Login with Username: '" + username + "'");
-        System.out.println("🔐 Attempting Admin Login with Password: '" + password + "'");
+        System.out.println(" Attempting Admin Login with Username: '" + username + "'");
+        System.out.println(" Attempting Admin Login with Password: '" + password + "'");
 
         Admin admin = AdminDAO.validateLogin(username, password);
 
         if (admin != null) {
-            System.out.println("✅ Admin Login Successful for: " + admin.getUsername());
+            System.out.println(" Admin Login Successful for: " + admin.getUsername());
             HttpSession session = request.getSession();
             session.setAttribute("admin", admin);
             response.sendRedirect("adminDashboard.jsp");
         } else {
-            System.out.println("❌ Admin Login Failed for Username: " + username);
+            System.out.println(" Admin Login Failed for Username: " + username);
             request.setAttribute("errorMessage", "Invalid admin credentials");
             request.getRequestDispatcher("adminLogin.jsp").forward(request, response);
         }
